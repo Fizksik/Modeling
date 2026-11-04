@@ -7,7 +7,7 @@
 using namespace std;
 using json = nlohmann::json;
 
-//эйлер
+//Euler
 void euler(double phi[],double w[],double epsilon[],int N,double dt,double phi0, double omega, double gamma,double A,double W){
     phi[0]=phi0;
     w[0]=0;
@@ -18,7 +18,7 @@ void euler(double phi[],double w[],double epsilon[],int N,double dt,double phi0,
         phi[i+1]=phi[i]+w[i]*dt;
     }
 }
-//хойн
+//Heun
 void heun(double phi[],double w[],double epsilon[],int N,double dt,double phi0, double omega, double gamma,double A,double W){
     phi[0]=phi0;
     w[0]=0;
@@ -29,7 +29,7 @@ void heun(double phi[],double w[],double epsilon[],int N,double dt,double phi0, 
         phi[i+1]=phi[i]+(w[i]+w[i+1])*dt/2;
     }
 }
-//обратный эйлер
+//Backward Euler
 void euler1(double phi[],double w[],double epsilon[],int N,double dt,double phi0, double omega, double gamma,double A,double W){
     phi[0]=phi0;
     w[0]=0;
@@ -40,7 +40,7 @@ void euler1(double phi[],double w[],double epsilon[],int N,double dt,double phi0
         phi[i+1]=phi[i]+w[i+1]*dt;
     }
 }
-//рунге-кутте
+//Runge-Kutta
 void rk(double phi[],double w[],double epsilon[],int N,double dt,double phi0, double omega, double gamma,double A,double W){
     phi[0]=phi0;
     w[0]=0;
